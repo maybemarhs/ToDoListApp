@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todolist/widgets/tasks_list.dart';
 
 class TaskScreen extends StatelessWidget {
   const TaskScreen({Key? key}) : super(key: key);
@@ -45,10 +46,12 @@ class TaskScreen extends StatelessWidget {
         ),
           Expanded(
             child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(20.0),topRight: Radius.circular(20.0),)
               ),
+              child: TasksList(),
             ),
           )
       ]),
