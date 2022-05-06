@@ -1,7 +1,8 @@
 # todolist
 
-to do list app
+This is an app where you can create your list of things to do.
 
+It's build with Flutter and Dart for iOS and Android
 ## Getting Started
 
 This project is a starting point for a Flutter application.
