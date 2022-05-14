@@ -9,9 +9,15 @@ class TaskScreen extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.black45,
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: (){
-          showModalBottomSheet(context: context, builder: (context) => AddTaskScreen());
+          showModalBottomSheet(
+              context: context,
+              isScrollControlled: true,
+              builder: (context) =>SingleChildScrollView(
+                  child: Container(
+                    padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+                      child: const AddTaskScreen())));
         },
       ),
       backgroundColor: Colors.black26,
@@ -19,10 +25,10 @@ class TaskScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
-          padding: EdgeInsets.only(left: 30.0, top:60.0, right:30.0,bottom: 30.0),
+          padding: const EdgeInsets.only(left: 30.0, top:60.0, right:30.0,bottom: 30.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children:  <Widget>[
+            children:  const <Widget>[
               CircleAvatar(
                   backgroundColor: Colors.white,
                   radius: 30.0,
@@ -48,12 +54,12 @@ class TaskScreen extends StatelessWidget {
         ),
           Expanded(
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
-              decoration: BoxDecoration(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(20.0),topRight: Radius.circular(20.0),)
               ),
-              child: TasksList(),
+              child: const TasksList(),
             ),
           )
       ]),

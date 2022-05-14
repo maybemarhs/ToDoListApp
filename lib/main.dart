@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todolist/screens/tasks_screens.dart';
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: MyApp()
     ),
   );
